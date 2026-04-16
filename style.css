@@ -6,34 +6,43 @@ body {
 
 .navbar {
   position: fixed;
-  top: 20px;            /* Detaches it from the very top */
-  left: 50%;            /* Centers the navbar horizontally */
+  top: 20px;
+  left: 50%;
   transform: translateX(-50%);
-  width: 90%;           /* Sets width so it doesn't touch the sides */
-  max-width: 1200px;
-  z-index: 1000;        /* Ensures it sits on top of other content */
-  
-  /* Optional styling for the "floating" look */
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 50px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
 
+  width: 90%;
+  max-width: 1200px;
+  z-index: 1000;
+
+  /* Layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  /* Style */
+  background-color: rgba(3, 3, 3, 0.9);
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Fix for corner issue */
+  overflow: hidden;
+}
 
 .navbar li {
     flex: 1;
 }
 
 .navbar a {
-    display: block;
-    padding: 14px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background 0.2s;
 }
 
 .navbar a:hover {
-    background-color: #555;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .navbar a.active {
