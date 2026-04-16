@@ -14,18 +14,16 @@ body {
   max-width: 1200px;
   z-index: 1000;
 
-  /* Layout */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 
-  /* Style */
   background-color: rgba(3, 3, 3, 0.9);
   border-radius: 50px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  /* Fix for corner issue */
+  padding: 10px 0;
   overflow: hidden;
 }
 
