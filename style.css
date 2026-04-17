@@ -2,6 +2,8 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    padding-top: 200px;
+    padding-left: 200px;
 }
 
 .navbar {
@@ -12,21 +14,21 @@ body {
 
   width: 90%;
   max-width: 1200px;
-  z-index: 1000;
 
   display: flex;
-  justify-content: space-between; 
   align-items: center;
 
   background-color: rgba(3, 3, 3, 0.9);
   border-radius: 50px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  padding: 20px 20px; 
+  padding: 20px 0px; 
 }
 
 .navbar li {
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar a {
@@ -43,4 +45,29 @@ body {
 
 .navbar a.active {
     background-color: #04AA6D;
+}
+
+.wrap {
+    position: relative;
+    display: block;        
+    width: fit-content;   
+    margin-bottom: 40px;   
+}
+
+.wrap + .wrap {
+    margin-top: -120px;     
+    margin-left: 5px;     
+    transform: scale(0.74);  
+    transform-origin: top left; 
+}
+
+.wrap img {
+    display: block;
+    max-width: 100%;
+}
+
+.wrap img + .content {
+    position: absolute;
+    top: 100px;
+    left: 100px;
 }
